@@ -1,0 +1,169 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+
+$font-14: 14px;
+$font-20: 20px;
+$font-600: 500;   //字体font-weight500
+$height-32: 32px;  //input高度32
+$height-40: 40px;  //height 40
+$ipt-border: 1px solid #E8E8E8;
+$border-color: #E8E8E8;
+$btn-color: #4993FF;
+$font-color: #4a4a4a;
+$color-bg-white: #fff;  //全局背景
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-width: 1440px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif; 
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+  // overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+i,em{
+  font-style: normal;
+}
+
+div:focus {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+.is-active{
+  border-right: 4px solid #4993FF !important;
+  background: #F0F8FF;
+}
+// 分页选中颜色
+.el-pagination{
+  font-weight: 400;
+  color: #4a4a4a;
+}
+.el-pager li{
+  border: 1px solid #fff;
+  border-radius: 4px;
+  min-width: 24px;
+}
+.el-pager li.active{
+  border: 1px solid #4993FF;
+  border-radius: 4px;
+}
+.el-dialog{
+  max-width: 880px;
+  max-height: 700px;
+  min-height: 240px;
+}
+.el-dialog__body{
+  max-height: 600px;
+  overflow: auto;
+  color: #333;
+}
+.el-dialog__footer{
+  border-top: 1px solid #E8E8E8;
+}
+// 返回上一页箭头和文字的间距
+.el-icon-arrow-left{
+  margin-right: 10px;
+}
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+// 表格头部上边框
+.el-dialog__header{
+  border-top: 1px solid #E8E8E8;
+}
+// 表格左右边框
+.el-table--fit{
+  border-right: 1px solid #E8E8E8;
+  border-left: 1px solid #E8E8E8;
+}
+//main-container全局样式
+.app-main {
+  min-height: 100%;
+}
+
+.app-container {
+  padding: 20px;
+}
+.cell{
+  // white-space: nowrap !important;
+  text-overflow: ellipsis;
+}
+
+// 导航title没用到
+.el-menu-item-group__title{
+  padding: 0;
+}
+
+
+// 搜索框
+.my-autocomplete {
+  li {
+    line-height: normal;
+    padding: 7px;
+
+    .name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .addr {
+      font-size: 12px;
+      color: #b4b4b4;
+    }
+
+    .highlighted .addr {
+      color: #ddd;
+    }
+  }
+}
+.iconfont {
+  margin-right: 10px;
+}
+// 全局输入框悬浮效果
+.el-input__inner:hover{
+  border-color: #73b0ff;
+}

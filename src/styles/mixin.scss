@@ -1,0 +1,157 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+$font-14: 14px;
+$font-20: 20px;
+$font-28: 28px;
+$font-30: 30px;
+$font-600: 500;   //字体font-weight500
+$height-32: 32px;  //input高度32
+$height-40: 40px;  //height 40
+$ipt-border: 1px solid #E8E8E8;
+$border-color: #E8E8E8;
+$btn-color: #4993FF;
+$font-color: #4a4a4a;
+$font-word-color: #666666;
+$color-bg-white: #fff;  //全局背景
+
+p,html,h1,h2,h3,h4,h5,h6{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: $font-14;
+  color: $font-color;
+}
+
+.el-table th,.el-table td{
+  padding: 0;
+  height: 50px;
+  text-align: center;
+}
+.el-table th{
+  color: #4A4A4A;
+  background: #F7F9FB;
+}
+.el-dialog__body{
+  overflow: auto;
+}
+//搜索框icon背景覆盖
+.el-input-group__append{
+  background: #fff;
+}
+// .el-button--danger{
+//   color: #F85E5E;
+//   background: #fff;
+// }
+// 管理页面子头部样式
+
+.tab-link{
+  height: 48px;
+  width: 100%;
+  line-height: 48px;
+  background: $color-bg-white;
+  padding: 0 16px;
+  li{
+    float: left;
+    height: 100%;
+    padding: 0 17px;
+    border-bottom: 2px solid #fff;
+    color: #464C5B;
+    font-weight: $font-600;
+    line-height: 48px;
+    text-align: center;
+    &:hover{
+      color: #4993FF;
+      background: #F0F8FF;
+    }
+  }
+  .selected{
+    color: #4993FF;
+    background: #F0F8FF;
+    border-bottom: 2px solid #4993FF;
+  }
+}
+//主要内容区域
+.main-info{
+  flex: 1;
+  background: #fff;
+  margin: 16px;
+  padding: 16px;
+  font-family:PingFangSC-Medium;
+  font-size: 14px;
+}
+//主要顶部信息
+
+.info {
+  height: 48px;
+  width: 100%;
+  line-height: 48px;
+  background: $color-bg-white;
+  padding: 0 36px;
+}
+// 输入框样式  选择框  文本域
+.el-input__inner,.el-select{
+  flex: 1;
+  max-width: 660px;
+}
+.el-textarea{
+  flex: 1;
+  max-width: 640px;
+}
+.el-input{
+  max-width: 640px;
+}
+.el-form-item__content{
+  display: flex;
+}
+// 弹出框title样式
+.el-dialog__header{
+  border: $ipt-border;
+  height: 56px;
+  padding: 0;
+  padding-left: 18px;
+  line-height: 56px;
+  .el-dialog__title{
+    font-size: 17px;
+    color: #333;
+    font-weight: 600;
+  }
+}
+
+// 弹出框label样式
+// .el-dialog__header{
+//   height: 56px;
+// }
+.el-form-item__label{
+  font-weight: 400;
+}
+
+// 文本域默认高度
+.el-textarea__inner{
+  height: 94px;
+}
